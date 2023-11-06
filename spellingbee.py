@@ -1,6 +1,5 @@
-from nltk.corpus import words
+from main import word_list
 
-word_list = words.words()
 successful_words_used = []
 
 def spelling_bee(letters, guess):
