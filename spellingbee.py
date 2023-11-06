@@ -28,7 +28,7 @@ def spelling_bee(letters, guess):
         return "Not in the word list."
     
     if letter_list[0] not in guess:
-        return "Center letter isn't used."
+        return "Main letter isn't used."
 
     successful_words_used.append(guess)
     return "Success!"
