@@ -6,5 +6,5 @@ def daily_letters():
     better_word_list = [n for n in random_word_list if not n[0].isupper()]
     random_word = better_word_list[randint(0, len(random_word_list)-1)]
     daily_letters = [n for n in set(random_word)]
-    print(random_word)
+    
     return daily_letters

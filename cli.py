@@ -11,13 +11,12 @@ successful_words_used = []
 def main():
     print(f"Today's Letters: |{necessary_letter}| {optional_letters}")
     print("Press 0 to exit.")
-    print("Press 5 to cheat.")
     points = 0
     while True:
         choice = input("Enter your word: ")
         if choice == "0":
             exit()
-        if choice == "5":
+        if choice == "5742":
             all_answers(copy)
         else:
             message = spelling_bee(copy, choice)
