@@ -28,8 +28,8 @@ def main():
                 print(f"Total Points: {points}")
                 print("=============")
             elif message == "!! PANGRAM !!":
-                points += (len(choice) + 10)
-                print(f"+{(len(choice) + 10)}")
+                points += (len(choice) + 7)
+                print(f"+{(len(choice) + 7)}")
                 print(f"Total Points: {points}")
                 print("=============")
             print(f"|{necessary_letter}| {optional_letters}")
