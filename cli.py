@@ -1,25 +1,29 @@
-from spellingbee import spelling_bee
+from spellingbee import spelling_bee, successful_words_used
 from daily_letters import daily_letters
 from all_answers import all_answers
 
 copy = daily_letters().copy()
 necessary_letter = copy[0]
 optional_letters = copy[1:]
-successful_words_used = []
+test = ["s", "a", "b", "e", "r", "i", "t"]
 
 
 def main():
-    print(f"Today's Letters: |{necessary_letter}| {optional_letters}")
+    # print(f"Today's Letters: |{necessary_letter}| {optional_letters}")
+    print(test)
     print("Press 0 to exit.")
+    print("Press 1 to see your successful words.")
     points = 0
     while True:
         choice = input("Enter your word: ")
         if choice == "0":
             exit()
-        if choice == "5742":
-            all_answers(copy)
+        elif choice == "1":
+            print(sorted(successful_words_used))
+        elif choice == "5742":
+            all_answers(test)
         else:
-            message = spelling_bee(copy, choice)
+            message = spelling_bee(test, choice)
             print(message)
             print("=============")
             if message == "Success!":
@@ -32,7 +36,8 @@ def main():
                 print(f"+{(len(choice) + 7)}")
                 print(f"Total Points: {points}")
                 print("=============")
-            print(f"|{necessary_letter}| {optional_letters}")
+            # print(f"|{necessary_letter}| {optional_letters}")
+            print(test)
         
 
 if __name__ == "__main__":

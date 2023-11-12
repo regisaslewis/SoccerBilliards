@@ -13,10 +13,6 @@ def spelling_bee(letters, guess):
 
     if guess in successful_words_used:
         return "Already used."
-
-    if set(guess_list) == set(letter_list):
-        successful_words_used.append(guess)
-        return "!! PANGRAM !!"
     
     if invalid_letters:
         return f"Invalid letter{'s' if len(invalid_letters) > 1 else ''}: {sorted(set(invalid_letters))}" 
@@ -26,6 +22,10 @@ def spelling_bee(letters, guess):
     
     if guess not in word_list:
         return "Not in the word list."
+
+    if set(guess_list) == set(letter_list):
+        successful_words_used.append(guess)
+        return "!! PANGRAM !!"
     
     if letter_list[0] not in guess:
         return "Main letter isn't used."
