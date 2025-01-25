@@ -1,1 +1,1 @@
-Hello!  I'm trying to make a Spelling Bee clone as practice.  Please disregard!
+Please disregard!
